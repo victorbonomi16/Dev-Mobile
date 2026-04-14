@@ -11,13 +11,10 @@ import {
 } from "react-native-paper";
 import myColors from "./assets/colors.json";
 import myColorsDark from "./assets/colorsDark.json";
-
-// NOVOS IMPORTS
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Location from "expo-location";
 import * as SQLite from "expo-sqlite";
 
-// 🔧 ALTERAÇÃO 1 (aqui)
 const db = SQLite.openDatabaseSync("locations.db");
 
 export default function App() {
@@ -31,7 +28,6 @@ export default function App() {
     colors: myColors.colors,
   });
 
-  // 🔧 ALTERAÇÃO 2 (aqui)
   useEffect(() => {
     db.execSync(`
       CREATE TABLE IF NOT EXISTS locations (
@@ -55,7 +51,6 @@ export default function App() {
     await AsyncStorage.setItem("darkMode", JSON.stringify(newValue));
   }
 
-  // 🔧 ALTERAÇÃO 3 (aqui)
   async function getLocation() {
     setIsLoading(true);
 
@@ -78,7 +73,6 @@ await db.execAsync(
     setIsLoading(false);
   }
 
-  // 🔧 ALTERAÇÃO 4 (aqui)
   async function loadLocations() {
     setIsLoading(true);
 
