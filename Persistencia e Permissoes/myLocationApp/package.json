@@ -1,0 +1,25 @@
+{
+  "name": "mylocationapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^3.0.2",
+    "expo": "~54.0.33",
+    "expo-location": "^55.1.8",
+    "expo-sqlite": "^55.0.15",
+    "expo-status-bar": "~3.0.9",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-paper": "^5.15.1"
+  },
+  "private": true,
+  "devDependencies": {
+    "babel-preset-expo": "^55.0.17"
+  }
+}
